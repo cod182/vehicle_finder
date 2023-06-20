@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { footerLinks } from '@/constants';
 
 const Footer = () => {
   return (
@@ -16,6 +17,33 @@ const Footer = () => {
           <p className="text-base text-gray-700">
             VehicleFinder 2023 | All Rights Reserved &copy;
           </p>
+        </div>
+        <div className="footer__links">
+          {footerLinks.map((link) => (
+            <div key={link.title} className="footer__link">
+              <h3 className="font-bold">{link.title}</h3>
+              {link.links.map((item) => (
+                <Link
+                  key={item.title}
+                  href={item.url}
+                  className="text-gray-500"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10">
+        <p>VehicleFinder 2023. All Rights Reserved &copy;</p>
+        <div className="footer__copyrights-link">
+          <Link href="/" className="text-gray-500">
+            Privacy Policy
+          </Link>
+          <Link href="/" className="text-gray-500">
+            Terms of Use
+          </Link>
         </div>
       </div>
     </footer>
