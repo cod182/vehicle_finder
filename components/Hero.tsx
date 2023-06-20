@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 import { CustomButton } from '@components';
 
-
 const Hero = () => {
   const handleScroll = () => {};
   return (
@@ -19,7 +18,13 @@ const Hero = () => {
       </div>
       <div className="hero__image-container">
         <div className="hero__image">
-          <Image src={}></Image>
+          <Image
+            src="/hero.png"
+            alt="hero car"
+            fill
+            className="object-contain"
+          />
+          <div className="hero__image-overlay"></div>
         </div>
       </div>
     </div>
