@@ -25,9 +25,11 @@ const SearchBar = () => {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (manufacturer === '' || model === '') {
+    if (manufacturer === '' && model === '') {
       return alert('Please fill in search bar');
     }
+
+    updateSearchParas(model.toLowerCase(), manufacturer.toLowerCase());
   };
 
   // gets url, adds new search params to it
