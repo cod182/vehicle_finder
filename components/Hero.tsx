@@ -1,10 +1,13 @@
 'use client';
 import Image from 'next/image';
 import { CustomButton } from '@components';
+import { useRouter } from 'next/navigation';
 
 const Hero = () => {
-  const handleScroll = () => {
-    window.scrollTo();
+  const router = useRouter();
+  const handleScroll = (e: any) => {
+    e.preventDefault();
+    router.push('#explore');
   };
 
   return (
@@ -27,7 +30,15 @@ const Hero = () => {
             className="object-contain"
           />
         </div>
-        <div className="hero__image-overlay hue-rotate-30"></div>
+        <div className="hero__image-overlay hue-rotate-30 relative">
+          <a
+            href="https://www.researchgate.net/figure/With-its-powerful-engine-and-advanced-electronics-the-GLC-offers-a-remarkably-refined_fig3_313794801"
+            className="text-white font-light text-sm cursor-pointer rotate-90 z-[20]"
+            target="_blank"
+          >
+            Exploded Image from: researchgate.net
+          </a>
+        </div>
       </div>
     </div>
   );
