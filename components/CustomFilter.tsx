@@ -8,7 +8,21 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CustomFilterProps } from '@Types';
 
 const CustomFilter = ({ title, options }: CustomFilterProps) => {
+  const router = useRouter();
+
   const [selected, setSelected] = useState(options[0]);
+
+  const handleUpdateParams = (type: string, value: string) => {
+    const searchParams = new URLSearchParams(window.location.search);
+
+    searchParams.set(type, value);
+
+    const newPathName = `${
+      window.location.pathname
+    }?${searchParams.toString()}`;
+
+    router.push(newPathName);
+  };
 
   return (
     <div className="w-fit">
