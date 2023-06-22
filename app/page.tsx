@@ -5,10 +5,11 @@ import {
   SearchBar,
   ShowMoreBtn,
 } from '@/components';
+import { HomeProps } from '@Types';
 import { fuels, yearsOfProduction } from '@constants';
 import { fetchCars } from '@utils';
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: HomeProps) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
     model: searchParams.model || '',
