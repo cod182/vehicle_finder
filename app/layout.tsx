@@ -1,6 +1,5 @@
 import { Footer, NavBar } from '@components';
 import './globals.css';
-import { Inter } from 'next/font/google';
 
 export const metadata = {
   title: 'Vehicle Finder',
