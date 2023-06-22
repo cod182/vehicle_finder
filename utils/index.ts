@@ -49,7 +49,7 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
   return `${url}`;
 };
 
-export const handleUpdateParams = (type: string, value: string) => {
+export const UpdateSearchParams = (type: string, value: string) => {
   const searchParams = new URLSearchParams(window.location.search);
 
   searchParams.set(type, value);
