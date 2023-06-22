@@ -55,7 +55,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                   </button>
                   <div className="flex-1 flex flex-col gap-3">
                     {/* Large Car Image */}
-                    <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
+                    <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg bg-purple-800 bg-blend-color-dodge">
                       <Image
                         src={generateCarImageUrl(car)}
                         alt="car model"
