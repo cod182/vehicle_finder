@@ -30,7 +30,7 @@ export interface CarProps {
   year: number;
 }
 
-export interface FilterProps {
+export interface FilteredProps {
   manufacturer?: string;
   year?: number;
   model?: string;
@@ -39,7 +39,7 @@ export interface FilterProps {
 }
 
 export interface HomeProps {
-  searchParams: FilterProps;
+  searchParams: FilteredProps;
 }
 
 export interface OptionProps {
